@@ -127,8 +127,8 @@ a:active {
                         echo '<div class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">'.$row["nama"].'</a>
 						<ul class="dropdown-menu dropdown-menu-end">
-							<li><a class="dropdown-item" href=#>My Order</a></li>
-							<li><a class="dropdown-item" href=#>WishList</a></li>
+							<li><a class="dropdown-item" href="Order Summary.php">My Order</a></li>
+							<li><a class="dropdown-item" href="wishlist.php">WishList</a></li>
 							<div class="dropdown-divider"></div>
 							<li class="bg-danger text-center"><a href = "logout.php" class="text-light">Sign Out</a></li>
 						</ul>
