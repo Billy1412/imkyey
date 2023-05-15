@@ -119,7 +119,20 @@ a:active {
             <div class = "login" style="padding-top : 0.4rem;">
                 <?php
                     if(isset($_SESSION["id"])){
-                        echo "<button type='button' class='btn btn-dark' style='border-radius: 0px;'><a href = 'logout.php' class='text-white'>Logout</a></button>";
+						require 'connect.php';
+						$sql = "SELECT nama FROM member WHERE id_member='".$_SESSION['id']."'";
+						$res= mysqli_query($con,$sql);
+						$row=mysqli_fetch_array($res);
+						mysqli_close($con);
+                        echo '<div class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">'.$row["nama"].'</a>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li><a class="dropdown-item" href=#>My Order</a></li>
+							<li><a class="dropdown-item" href=#>WishList</a></li>
+							<div class="dropdown-divider"></div>
+							<li class="bg-danger text-center"><a href = "logout.php" class="text-light">Sign Out</a></li>
+						</ul>
+					</div>';
                     }
                     else{
                         echo '<button type="button" class="btn btn-dark" style="border-radius: 0px; margin-right: 1ex;"><a href = "login.php" class="text-white">Login </a></button>
