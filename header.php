@@ -125,7 +125,7 @@ a:active {
 						$row=mysqli_fetch_array($res);
 						mysqli_close($con);
                         echo '<div class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">'.$row["nama"].'</a>
+						<a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="text-center text-light" style="height: 35px; width: 35px; background-color: #281317; border-radius: 50%; margin-right:10px; display: inline-block; padding-top:1px;"><h4>'.substr($row["nama"],0,1).'</h4></span>'.$row["nama"].'</a>
 						<ul class="dropdown-menu dropdown-menu-end">
 							<li><a class="dropdown-item" href="Order Summary.php">My Order</a></li>
 							<li><a class="dropdown-item" href="wishlist.php">WishList</a></li>
